@@ -56,7 +56,9 @@
   <label for="">Số Phòng</label>
   <input type="text" class="form-control" formControlName="room_number">
    <div *ngIf="room_number.invalid && (room_number.touched || room_number.dirty)">
-                        <p *ngIf="room_number.errors.required" class="text-danger">Hãy điền Địa Chỉ</p>
+                        <p *ngIf="room_number.errors.required" class="text-danger">Hãy điền số Phòng</p>
+                        <p *ngIf="room_number.errors.maxLength" class="text-danger">Max 5 kí tự</p>
+                       
                        
                         
                     </div>

@@ -33,6 +33,8 @@ export class MotelFormComponent implements OnInit {
       room_number: new FormControl('',[
         Validators.required,
         
+        Validators.maxLength(5),
+       
       ])
 
   })
