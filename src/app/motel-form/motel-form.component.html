@@ -58,7 +58,7 @@
    <div *ngIf="room_number.invalid && (room_number.touched || room_number.dirty)">
                         <p *ngIf="room_number.errors.required" class="text-danger">Hãy điền số Phòng</p>
                         <p *ngIf="room_number.errors.maxLength" class="text-danger">Max 5 kí tự</p>
-                       
+                       <p *ngIf="room_number.errors.pattern" class="text-danger">Chỉ Được Nhập Số</p>
                        
                         
                     </div>

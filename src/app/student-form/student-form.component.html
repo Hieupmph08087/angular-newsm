@@ -32,6 +32,7 @@
                         <p *ngIf="roll_number.errors.required" class="text-danger">Hãy điền Roll_number</p>
                         <p *ngIf="roll_number.errors.minlength" class="text-danger">Roll_number có ít nhất 1 ký tự</p>
                         <p *ngIf="roll_number.errors.maxlength" class="text-danger">Roll_number có nhiều nhất nhất 10 ký tự</p>
+                        <p *ngIf="roll_number.errors.pattern" class="text-danger">Chỉ Được Nhập Số</p>
                     </div>
 </div>
 <div>
@@ -58,6 +59,7 @@
                         <p *ngIf="room_no.errors.required" class="text-danger">Hãy điền Số Phòng</p>
                         <p *ngIf="room_no.errors.minlength" class="text-danger">Số Phòng có ít nhất 4 ký tự</p>
                         <p *ngIf="room_no.errors.maxlength" class="text-danger">Số Phòng có nhiều nhất nhất 7 ký tự</p>
+                        <p *ngIf="room_no.errors.pattern" class="text-danger">Chỉ Được Nhập Số</p>
                     </div>
 </div>
 <div>

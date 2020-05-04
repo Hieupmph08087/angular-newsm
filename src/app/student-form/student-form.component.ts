@@ -20,7 +20,8 @@ studentForm = new FormGroup({
     roll_number: new FormControl('',[
       Validators.required,
       Validators.minLength(1),
-      Validators.maxLength(10)
+      Validators.maxLength(10),
+      Validators.pattern(/^-?(0|[1-9]\d*)?$/)
     ]),
     avatar: new FormControl('',[
       Validators.required,
@@ -34,7 +35,8 @@ studentForm = new FormGroup({
     room_no: new FormControl('',[
       Validators.required,
       Validators.minLength(1),
-      Validators.maxLength(7)
+      Validators.maxLength(7),
+      Validators.pattern(/^-?(0|[1-9]\d*)?$/)
     ]),
    
   });
