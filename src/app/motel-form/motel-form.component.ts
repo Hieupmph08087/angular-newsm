@@ -14,7 +14,8 @@ export class MotelFormComponent implements OnInit {
            Validators.required,
            
            Validators.minLength(4),
-           Validators.maxLength(20)
+           Validators.maxLength(20),
+           Validators.pattern(/^-?(\s)?$/)
       ]),
       owner: new FormControl('',[
         Validators.required,

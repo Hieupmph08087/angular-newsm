@@ -23,6 +23,7 @@
                         <p *ngIf="name.errors.required" class="text-danger">Hãy điền họ và tên</p>
                         <p *ngIf="name.errors.minlength" class="text-danger">Họ và tên có ít nhất 4 ký tự</p>
                         <p *ngIf="name.errors.maxlength" class="text-danger">Họ và tên có nhiều nhất nhất 20 ký tự</p>
+                        <p *ngIf="name.errors.pattern" class="text-danger">Không được có kí tự trắng</p>
                     </div>
 </div>
 <div>

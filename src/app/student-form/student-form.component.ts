@@ -15,7 +15,8 @@ studentForm = new FormGroup({
     name: new FormControl('',[
       Validators.required,
       Validators.minLength(4),
-      Validators.maxLength(20)
+      Validators.maxLength(20),
+      Validators.pattern(/^-?(\s)?$/)
     ]),
     roll_number: new FormControl('',[
       Validators.required,
