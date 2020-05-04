@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    
+<div class="container" >
+  <div class="col-4 offset-md-5">
+ 
+<form [formGroup]="motelForm">
+<div>
+  <label for="">Tên Phòng Trọ: </label>
+  <input type="text" class="form-control" formControlName="name">
+   <div *ngIf="name.invalid && (name.touched || name.dirty)">
+                        <p *ngIf="name.errors.required" class="text-danger">Hãy điền họ và tên</p>
+                        <p *ngIf="name.errors.minlength" class="text-danger">Họ và tên có ít nhất 4 ký tự</p>
+                        <p *ngIf="name.errors.maxlength" class="text-danger">Họ và tên có nhiều nhất nhất 20 ký tự</p>
+                    </div>
+</div>
+<div>
+  <label for="">Tên Chủ Phòng Trọ: </label>
+  <input type="text" class="form-control" formControlName="owner">
+   
+    <div *ngIf="owner.invalid && (owner.touched || owner.dirty)">
+        <p *ngIf="owner.errors.required" class="text-danger">Hãy điền Tên Chủ Trọ</p>
+                        <p *ngIf="owner.errors.minlength" class="text-danger">Tên Chủ Trọ có ít nhất 2 ký tự</p>
+                        <p *ngIf="owner.errors.maxlength" class="text-danger">Tên Chủ Trọ có nhiều nhất nhất 10 ký tự</p>
+    </div>
+</div>
+<div>
+  <label for="">Ảnh Phòng Trọ: </label>
+  <input type="text" class="form-control" formControlName="avatar">
+   <div *ngIf="avatar.invalid && (avatar.touched || avatar.dirty)">
+                        <p *ngIf="avatar.errors.required" class="text-danger">Nhập Link Ảnh</p>
+                        <p *ngIf="avatar.errors.pattern" class="text-danger">Đường dẫn file không đúng định dạng ảnh (gif | jpe?g | tiff | png | webp | bmp)</p>
+                    </div>
+</div>
+<div>
+  <label for="">Địa Chỉ Phòng Trọ</label>
+  <input type="text" class="form-control" formControlName="address">
+    <div *ngIf="address.invalid && (address.touched || address.dirty)">
+                        <p *ngIf="address.errors.required" class="text-danger">Hãy điền Địa Chỉ</p>
+                        <p *ngIf="address.errors.minlength" class="text-danger">Địa Chỉ có ít nhất 5 ký tự</p>
+                        <p *ngIf="address.errors.maxlength" class="text-danger">Địa Chỉ có nhiều nhất nhất 50 ký tự</p>
+                    </div>
+</div>
+<div>
+  <label for="">Số Phòng</label>
+  <input type="text" class="form-control" formControlName="room_number">
+   <div *ngIf="room_number.invalid && (room_number.touched || room_number.dirty)">
+                        <p *ngIf="room_number.errors.required" class="text-danger">Hãy điền Địa Chỉ</p>
+                       
+                        
+                    </div>
+</div>
+<div>
+  <br>
+  <button [disabled]="motelForm.invalid" (click)="saveMotel()" type="button" class="btn btn-success">Luu</button>
+</div>
+</form>
+</div>
+</div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
+
+
+         

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    
+<div align="center">
+
+<img [src]='motelData.image' width="100px">
+<br>
+<h2>Tên: {{motelData.name}}</h2><br>
+<h3>Owner : {{motelData.owner}} </h3><br>
+<h3>address : {{motelData.address}} </h3><br>
+<h3>Room : {{motelData.roomnumber}} </h3>
+
+
+<button  [routerLink]="['../../edit-motel',motelData.id]" type="button" class="btn btn-success">Cap nhap</button>
+ &nbsp;
+
+<button (click)="removeMotel()" type="button" class="btn btn-danger">Xoa</button>
+<hr>
+<br>
+<h3> Danh sach nguoi thue :</h3>
+
+<button [routerLink]="['../../motels',motelData.id,'add-student']" type="button" class="btn btn-secondary">Tạo mới</button>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Motels ID</th>
+      <th scope="col">name</th>
+      <th scope="col">avatar</th>
+      <th scope="col">roll_number</th>
+      <th scope="col">address</th>
+      <th scope="col">room_no</th>
+      <th scope="col">Chỉnh Sửa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let s of studentMotel">
+      <td>{{s.id}}</td>
+      <td>{{s.motelsid}}</td>
+      <td>{{s.name}}</td>
+      <td><img src={{s.avatar}} style="width: 50px;"></td>
+      <td> {{s.rollnumber}}</td>
+      <td>{{s.address}}</td>
+      <td>{{s.roomno}}</td>
+      <td><button  [routerLink]="['../../motels',motelData.id,'edit-student',s.id]"  class="btn btn-warning" >Sửa</button>
+        <button (click)="removeS(s)" type="button" class="btn btn-danger">Xóa</button></td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
+
